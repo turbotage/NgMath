@@ -1,0 +1,13 @@
+﻿  main_math.cpp
+c:\users\turbotage\source\repos\ngmath\ngmath\main_math.cpp(23): warning C4305: 'argument': truncation from 'double' to 'float'
+  quaternion.cpp
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(94): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(107): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(301): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(308): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(325): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\source\repos\ngmath\ngmath\src\quaternion.cpp(334): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+  Generating Code...
+  NgMath.vcxproj -> C:\Users\TurboTage\source\repos\NgMath\Debug\NgMath.exe
