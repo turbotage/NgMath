@@ -16,7 +16,9 @@ ngm::Vec3f rotateNoSSE(const ngm::Quaternion& quat, const ngm::Vec3f& vec) {
 	);
 }
 
-int main() {
+
+/**  write your test code here and call it from your main, currently it is a test for quaternion rotations  **/
+int test_main() {
 
 	ngm::Quaternion qt1;
 
@@ -43,3 +45,12 @@ int main() {
 
 	return 0;
 }
+
+
+//uncomment to just run math example test_main, comment to remove main and use as library
+/*
+int main() {
+	test_main();
+	return 0;
+}
+*/

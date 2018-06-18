@@ -144,11 +144,6 @@ ngm::Vec3f ngm::Quaternion::getEulerAngles(const Quaternion & quat)
 void ngm::Quaternion::rotate(Vec3f & vec)
 {
 	Quaternion temp;
-
-	Quaternion first;
-	Quaternion second;
-	Quaternion third;
-	Quaternion forth;
 	
 	temp.row = _mm_sub_ps
 		(
