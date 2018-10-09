@@ -22,14 +22,20 @@ int test_main() {
 
 	ngm::Quaternion qt1;
 
-	qt1.setRotation(ngm::Vec3f(0, 1, 0), TO_RADIANS(180));
+	qt1.setRotation(ngm::Vec3f(1.0f, 1.0f, 1.0f).normalize(), TO_RADIANS(90.0f));
+	qt1.normalize();
 
-	ngm::Vec3f p1(1, 0, 0);
-	ngm::Vec3f p2(1, 0, 0);
-	ngm::Vec3f p3(1, 0, 0);
-	ngm::Vec3f p4(1, 0, 0);
+	ngm::Mat4f rotationMatrix = ngm::Mat4f::rotation(ngm::Vec3f(1.0f, 1.0f, 1.0f).normalize(), TO_RADIANS(90.0f));
+
+	ngm::Vec3f p1(1.0f, 3.0f, 2.0f);
+	ngm::Vec3f p2(0, 1, 0);
+	ngm::Vec3f p3(0, 0, 1);
+	ngm::Vec3f p4(0, 0, 1);
 	
 	std::cout << p1 << std::endl;
+
+	std::cout << rotationMatrix * p1 << std::endl;
+	
 	
 	qt1.rotate4(p1, p2, p3, p4);
 
@@ -46,11 +52,11 @@ int test_main() {
 	return 0;
 }
 
+#define DEFINE_ENTRY_POINT 1
 
-//uncomment to just run math example test_main, comment to remove main and use as library
-/*
+#if DEFINE_ENTRY_POINT
 int main() {
 	test_main();
 	return 0;
 }
-*/
+#endif // DEFINE_ENTRY_POINT

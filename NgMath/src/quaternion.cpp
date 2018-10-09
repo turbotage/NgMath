@@ -151,7 +151,7 @@ void ngm::Quaternion::rotate(Vec3f & vec)
 				_mm_mul_ps(_mm_set_ps(getX(), getW(), getW(), getW()), _mm_set_ps(vec.x, vec.z, vec.y, vec.x)),
 				_mm_mul_ps(_mm_set_ps(getY(), getX(), getZ(), getY()), _mm_set_ps(vec.y, vec.y, vec.x, vec.z))
 			), 
-			_mm_mul_ps(_mm_set_ps(-getZ(), getY(), getX(), getZ()), _mm_set_ps(vec.z, vec.x, vec.z, vec.y))
+			_mm_mul_ps(_mm_set_ps(-1.0f*getZ(), getY(), getX(), getZ()), _mm_set_ps(vec.z, vec.x, vec.z, vec.y))
 		);
 
 	temp.row = _mm_add_ps(
@@ -164,16 +164,16 @@ void ngm::Quaternion::rotate(Vec3f & vec)
 			),
 			_mm_mul_ps
 			(
-				_mm_set_ps(0.0f, temp.getY(), temp.getX(), temp.getZ()),
-				_mm_set_ps(0.0f, getX(), getZ(), getY())
+				_mm_set_ps(0.0f, temp.getZ(), temp.getY(), temp.getX()),
+				_mm_set_ps(0.0f, getW(), getW(), getW())
 			)
 		), 
 		_mm_sub_ps
 		(
 			_mm_mul_ps
 			(
-				_mm_set_ps(0.0f, temp.getZ(), temp.getY(), temp.getX()),
-				_mm_set_ps(0.0f, getW(), getW(), getW())
+				_mm_set_ps(0.0f, temp.getY(), temp.getX(), temp.getZ()),
+				_mm_set_ps(0.0f, getX(), getZ(), getY())
 			),
 			_mm_mul_ps
 			(
@@ -273,21 +273,21 @@ void ngm::Quaternion::rotate4(Vec3f & v1, Vec3f & v2, Vec3f & v3, Vec3f & v4)
 	_mm_store_ps(xFloats, X);
 	_mm_store_ps(yFloats, Y);
 	_mm_store_ps(zFloats, Z);
-	v1.x = xFloats[3];
-	v1.y = yFloats[3];
-	v1.z = zFloats[3];
+	v1.x = xFloats[0];
+	v1.y = yFloats[0];
+	v1.z = zFloats[0];
 
-	v2.x = xFloats[2];
-	v2.y = yFloats[2];
-	v2.z = zFloats[2];
+	v2.x = xFloats[1];
+	v2.y = yFloats[1];
+	v2.z = zFloats[1];
 
-	v3.x = xFloats[1];
-	v3.y = yFloats[1];
-	v3.z = zFloats[1];
+	v3.x = xFloats[2];
+	v3.y = yFloats[2];
+	v3.z = zFloats[2];
 
-	v4.x = xFloats[0];
-	v4.y = yFloats[0];
-	v4.z = zFloats[0];
+	v4.x = xFloats[3];
+	v4.y = yFloats[3];
+	v4.z = zFloats[3];
 }
 
 float ngm::Quaternion::norm()

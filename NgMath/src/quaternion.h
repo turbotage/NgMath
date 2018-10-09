@@ -33,6 +33,7 @@ namespace ngm {
 		//Quaternion operator*(const Quaternion& right);
 		friend Quaternion operator*(Quaternion left, const Quaternion& right);
 
+		/* rotationAxis need to be normalized */
 		Quaternion& setRotation(const Vec3f& rotationAxis, float angle);
 		static Quaternion getQuaternion(const Vec3f& rotationAxis, float angle);
 
