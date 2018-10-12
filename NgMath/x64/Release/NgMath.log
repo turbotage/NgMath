@@ -1,1 +1,24 @@
-﻿  NgMath.vcxproj -> C:\Users\TurboTage\Documents\GitRepos\NgMath\x64\Release\NgMath.dll
+﻿  main_math.cpp
+  fft.cpp
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\fft.cpp(5): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\fft.cpp(51): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\fft.cpp(99): warning C4244: 'argument': conversion from 'size_t' to 'const std::complex<double>::_Ty', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\fft.cpp(108): warning C4244: 'argument': conversion from 'size_t' to 'const std::complex<double>::_Ty', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\fft.cpp(114): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  mat4f.cpp
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\mat4f.cpp(243): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  quaternion.cpp
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(94): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(96): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(107): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(296): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(303): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(320): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+c:\users\turbotage\documents\gitrepos\ngmath\ngmath\src\quaternion.cpp(329): warning C4556: value of intrinsic immediate argument '65535' is out of range '0 - 255'
+  Generating code
+  0 of 40 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  NgMath.vcxproj -> C:\Users\TurboTage\Documents\GitRepos\NgMath\x64\Release\NgMath.dll

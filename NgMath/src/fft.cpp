@@ -109,6 +109,30 @@ void ngm::FFT::inverseTransform(ComplexArray& arr)
 	//inverse fourier done
 }
 
+std::string ngm::FFT::outputCArrayReal(ComplexArray & arr, double stepSize)
+{
+	std::string str;
+	str += "FFT: | ";
+	for (int i = 0; i < arr.size(); ++i) {
+		//stream << "(" << ((double)i)*2*NG_PI/50 << "," << std::real(fourier.Array[i]) << "),";
+		str += ("(" + std::to_string((i+1)*stepSize) + "," + std::to_string(std::real(arr[i])) + "),");
+	}
+	str += " |";
+	return str;
+}
+
+std::string ngm::FFT::outputCArrayAbs(ComplexArray & arr, double stepSize)
+{
+	std::string str;
+	str += "FFT: | ";
+	for (int i = 0; i < arr.size(); ++i) {
+		//stream << "(" << ((double)i)*2*NG_PI/50 << "," << std::real(fourier.Array[i]) << "),";
+		str += ("(" + std::to_string((i + 1)) + "," + std::to_string(std::abs(arr[i])) + "),");
+	}
+	str += " |";
+	return str;
+}
+
 int ngm::FFT::getSizeFFT()
 {
 	return Array.size();
@@ -124,7 +148,8 @@ std::ostream & ngm::operator<<(std::ostream & stream, const FFT & fourier)
 {
 	stream << "FFT: (";
 	for (int i = 0; i < fourier.Array.size(); ++i) {
-		stream << fourier.Array[i] << " ";
+		//stream << "(" << ((double)i)*2*NG_PI/50 << "," << std::real(fourier.Array[i]) << "),";
+		stream << "(" << i << "," << std::abs(fourier.Array[i]) << "),";
 	}
 	stream << ")";
 	return stream;

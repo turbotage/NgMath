@@ -1,4 +1,2 @@
 ﻿  main_math.cpp
-c:\users\turbotage\documents\gitrepos\ngmath\ngmath\main_math.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\turbotage\documents\gitrepos\ngmath\ngmath\main_math.cpp(28): warning C4305: 'argument': truncation from 'double' to 'float'
   NgMath.vcxproj -> C:\Users\TurboTage\Documents\GitRepos\NgMath\x64\Debug\NgMath.exe

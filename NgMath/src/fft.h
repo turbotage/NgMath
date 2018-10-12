@@ -26,6 +26,10 @@ namespace ngm {
 
 		friend std::ostream& operator<<(std::ostream& stream, const FFT& fourier);
 
+		static std::string outputCArrayReal(ComplexArray& arr, double stepSize);
+
+		static std::string outputCArrayAbs(ComplexArray& arr, double stepSize);
+
 		int getSizeFFT();
 
 		FFT(ComplexArray arr);
