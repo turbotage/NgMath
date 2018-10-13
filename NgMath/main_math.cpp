@@ -75,10 +75,10 @@ int test_main() {
 	return 0;
 }
 
-#define DEFINE_ENTRY_POINT 1
+#define DEFINE_ENTRY_POINT 0
 
 #if DEFINE_ENTRY_POINT
-int main() {z
+int main() {
 	test_main();
 	return 0;
 }
